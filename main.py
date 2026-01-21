@@ -1,41 +1,44 @@
-import time
+# SAIL - Sistema de Agrupamento e Identificação de Lixo
+class Lixo():
+    def __init__(self, nome):
+        self._nome = nome
 
-# class Lixo():
-#     def __init__(self, tipo, categoria):
-#        self.tipo = tipo
-#        self.categoria = categoria
-#        self.lista_lixo = []
-
-    # def mostrar_lixo_categoria(self, tipo, categoria):
-
-    # def listagem(self, lista_lixo):
-    #     item = input('Adicione os itens que vão ser jogados fora: ')
-    #     lista_lixo.append(item)
-    #     return lista_lixo
-    #     
+    def get_nome(self):
+        return self._nome
     
-# class Reciclavel(Lixo):
-#     def __init__(self, tipo, categoria):
-#         super().__init__(tipo, categoria)
-
-
-class Menu():
-    print('=' * 20)
-    print('SAIL')
-    print('=' * 20)
-    time.sleep(2)
-
-    print('Bem-vindo(a) ao SAIL!')
-
-    def menu_principal(self):
-        print('''Escolha o serviço que o SAIL pode fazer por você:
-              (1) mostrar categoria do resíduo
-              (2) gerar lista de resíduos
-              (3) rrge
-              (4) ''')
-
-# m = Menu()
-# print(m)
+    def categoria(self):
+        return 'Desconhecida.'
+    
+    def descricao_descarte(self):
+        return 'Descrição não definida.'
+    
+class Reciclavel(Lixo):
+    def categoria(self):
+        return 'Reciclável.'
+    
+    def descricao_descarte(self):
+        return 'Deve ser devidamente lavado. Procure uma de nossas lixeiras inteligentes para descartá-lo corretamente.'
+    
+class Organico(Lixo):
+    def categoria(Lixo):
+        return 'Orgânico.'
+    
+    def descricao_descarte(self):
+        return 'Deve ser descartado em lixeiras específicas ou compostado. Não misture com outros tipos de lixo.'
+    
+class Residuos(Lixo):
+    def categoria(self):
+        return 'Resíduos.'
+    
+    def descricao_descarte(self):
+        return 'Pode ser descartado no lixo comum. Evite misturar com outros tipos de lixo'
+    
+class Eletronicos(Lixo):
+    def categoria(self):
+        return 'Eletrônicos.'
+    
+    def descricao_descarte(self):
+        return 'Não deve ser descartado no lixo comum. Vá à uma lixeira inteligente para o descarte adequado.'
     
 
 
